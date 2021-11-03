@@ -50,7 +50,7 @@ $ ./helloworld
 
 When you first run the application, you will see a colored triangle on GUI.
 
-<img src="https://github.com/CS6323utd/asst0_environment/blob/master/demo/triangle.png" width="300" height="300">
+<img src="./demo/assignment_0.png" width="500" height="500">
 
 ## FAQ / Dependencies / Troubleshooting
 
