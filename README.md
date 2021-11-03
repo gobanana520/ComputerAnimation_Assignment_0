@@ -1,38 +1,49 @@
-# UTD CS4392 Compute Animation and Gaming
+# Computer Animation and Gaming
 
 ## Getting started
-This repo is folked from https://github.com/CS6323utd/asst0_environment. The repo could be downloaded via below command:
-```
-$ git clone https://github.com/CS6323utd/asst0_environment.git
+The repo could be downloaded via below command:
+```sh
+git clone --recursive git@github.com:pzxszbry/ComputerAnimation_Assignment_0.git
 ```
 This will create an asst0_environment folder with all the source files.
 
+## Basic Environment Setup (MacOS)
+```sh
+# install Command Line Tools
+xcode-select --install
 
-## Build Instructions
+# switch to CLT
+sudo xcode-select -s /Library/Developer/CommandLineTools
 
-In order to ease the process of running on different platforms, we will be using CMake for our assignments. You will need a CMake installation of version 3.5+ to build the code for this assignment. It should also be relatively easy to build the assignment and work locally on your OSX. Building on Linux is still working in process. Building on Windows is currently not supported, please refers to the old tuitorial.
+# double check CLT path is configured
+xcode-select -p
 
-If you are working on OS X and do not have CMake installed, we recommend installing it through [**Homebrew**](https://brew.sh/):
-```
+# install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# install cmake
 brew install cmake
+
+# check gcc version
+gcc --version
 ```
 
 ### Build
+```sh
+# create build folder
+cd ComputerAnimation_Assignment_0 && mkdir build && cd build
 
-To build your code for this assignment:
+# build project
+cmake ..
+make
 ```
-$ cd asst0_environment && mkdir build && cd build
-$ cmake ..
-$ make
-```
-These steps (1) create an out-of-source build directory, (2) configure the project using CMake, and (3) compile the project. If all goes well, you should see an executable app in the build directory. As you work, simply typing ```make``` in the build directory will recompile the project.
 
 ### Run
 
 When you have successfully built your code, you will get an executable named **helloworld**. The helloworld executable do not take any argument. 
 
 To run your executable file:
-```
+```sh
 # under build folder
 $ ./helloworld
 ```
